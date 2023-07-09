@@ -1,0 +1,23 @@
+<div class="utilities">
+    <div class="container">
+        <h1 class="utilities__title">angular utilities</h1>
+        
+        <div class="case-types">
+            <span class="case-type active">All</span>
+            <span class="case-type">Base Angular</span>
+            <span class="case-type">Angular Utilities</span>
+            <span class="case-type">HTML Elements</span>
+            <span class="case-type">NgRx</span>
+        </div>
+
+        <div class="cases">
+            <case-link *ngFor="let case of cases"
+                [imageURL]="case.imageURL"
+                [title]="case.title"
+                [description]="case.description"
+                (click)="caseClick(case.id)"
+            >
+            </case-link>
+        </div>
+    </div>
+</div>
