@@ -1,1 +1,22 @@
-<p>pipes works!</p>
+<case-page>
+    <input type="text" [(ngModel)]="filteredStatus">
+    <br><br>
+    <button class="btn btn-primary" (click)="onAddServer()">Add Server</button>
+    <br><br>
+    <h2>App Status: {{ appStatus | async}}</h2>
+    <hr>
+    <ul class="list-group">
+    <li
+        class="list-group-item"
+        *ngFor="let server of servers"
+        [ngClass]="getStatusClasses(server)">
+        <span
+        class="badge">
+        {{ server.status }}
+        </span>
+        <strong>{{ server.name }}</strong> |
+        {{ server.instanceType | uppercase }} |
+        {{ server.started | date:'fullDate' | uppercase }}
+    </li>
+    </ul>
+</case-page>
