@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'case-page',
@@ -6,6 +6,11 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./case-page.component.less']
 })
 
-export class CasePageComponent {
+export class CasePageComponent implements OnInit {
   @Input() pageTitle: string;
+
+  ngOnInit(){
+    
+  }
+
 }

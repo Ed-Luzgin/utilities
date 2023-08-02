@@ -9,6 +9,7 @@ import { PipesCaseComponent } from './components/cases/pipes/pipes.component';
 import { ChartJsCaseComponent } from './components/cases/chartjs/chartjs.component';
 import { MainPageComponent } from './main-page.component';
 import { CasePageComponent } from './components/case-page/case-page.component';
+import { AlgorithmComponent } from './components/cases/algorithm/algorithm.component';
 
 const utilitiesRoutes: Routes = [
     {path: '', component: UtilitiesComponent },
@@ -18,7 +19,7 @@ const utilitiesRoutes: Routes = [
 
 @NgModule({
     imports:      [ BrowserModule, FormsModule, RouterModule.forRoot(utilitiesRoutes) ],
-    declarations: [ MainPageComponent, UtilitiesComponent, CaseLinkComponent, CaseCategoryComponent, PipesCaseComponent, CasePageComponent, ChartJsCaseComponent ],
+    declarations: [ MainPageComponent, UtilitiesComponent, CaseLinkComponent, CaseCategoryComponent, PipesCaseComponent, CasePageComponent, ChartJsCaseComponent, AlgorithmComponent ],
     bootstrap:    [ MainPageComponent ]
 })
 export class MainPageModule {}
